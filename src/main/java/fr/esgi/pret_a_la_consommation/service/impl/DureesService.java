@@ -1,12 +1,12 @@
 package fr.esgi.pret_a_la_consommation.service.impl;
 
-import fr.esgi.pret_a_la_consommation.business.Client;
 import fr.esgi.pret_a_la_consommation.business.Duree;
+import fr.esgi.pret_a_la_consommation.service.DureesInterface;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DureesService
+public class DureesService implements DureesInterface
 {
     private final List<Duree> durees;
 
@@ -14,11 +14,8 @@ public class DureesService
     {
         this.durees = new ArrayList<>();
 
-        clients.add(new Client(0, "Albert",    "Thomas"));
-        clients.add(new Client(1, "Allon",     "Muske"));
-        clients.add(new Client(2, "Dieu",      "Donné"));
-        clients.add(new Client(3, "Gérard",    "Dapardia"));
-        clients.add(new Client(4, "Dominique", "Strass-Kauhn"));
+        this.durees.add(new Duree(0, 12));
+        this.durees.add(new Duree(1, 24));
     }
 
     @Override
